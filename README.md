@@ -3,19 +3,31 @@
 i don't know
 
 ## Screen capture
+### performance test with GUI
 ![](readme-images/highest-gpa-pre.png)
 Results of performance testing for endpoint **'/highest-gpa'** using GUI
+
 ![](readme-images/all-student-name-pre.png)
 Results of performance testing for endpoint **'/all-student-name'** using GUI
 
+### performance test with command-line
 ![](readme-images/highest-gpa-pre-cli.png)
 Results of performance testing for endpoint **'/highest-gpa'** using command-line
+
 ![](readme-images/all-student-name-pre-cli.png)
 Results of performance testing for endpoint **'/all-student-name'** using command-line
 
+### optimizing /all-student
+![](readme-images/unoptimized-all-student.png)
+Sample of 4 tests before optimizing **'/all-student'** endpoint.<br>
+Average CPU time for the method is ~8 seconds
+
+![](readme-images/optimized-all-student.png)
+Sample of 4 tests after optimizing **'/all-student'** endpoint.<br>
+Average CPU time for the method is ~1.6 seconds, which is an ~80% reduction in CPU time
 
 ## Reflection 1
-Please answer the following questions:
+ans:
 - What is the difference between the approach of performance testing with JMeter and profiling with IntelliJ Profiler in the context of optimizing application performance?
 > lorem ipsum dolor
 - How does the profiling process help you in identifying and understanding the weak points in your application?
@@ -37,7 +49,7 @@ Please answer the following questions:
 - [x] Commit your source code into your main branch in your repository
 - [x] Create 2 other test plan for endpoints /all-student-name and /highest-gpa. Perform performance testing as has been done above. Take a screenshot of the results and place it in the README.md file
 - [x] Run both test plans that you have previously created (for endpoint /highest-gpa and /all-student-name) using the command line, take a screenshot of the results, and include them in the README.md file.
-- [ ] Refactor that code to achieve better performance. Commit in a new branch named “optimize”. Create representative commit messages. Do not use commit messages like "OK", "Cool", "Great", but instead create commit messages like "[Refactoring] - Optimizing method getAllStudentWithCourse".
+- [x] Refactor that code to achieve better performance. Commit in a new branch named “optimize”. Create representative commit messages. Do not use commit messages like "OK", "Cool", "Great", but instead create commit messages like "[Refactoring] - Optimizing method getAllStudentWithCourse".
 - [ ] Perform the profiling process and optimizing the code for others endpoint (/all-student-name and /highest-gpa). Also achieve a 20% performance improvement for both of those endpoints. Commit in “optimize” branch also create representative commit messages. Do not use commit messages like "OK", "Cool", "Great", but instead create commit messages like "[Refactoring] - Optimizing method getAllStudentWithCourse".
 - [ ] After the profiling and performance optimization process is completed, perform a performance test again using JMeter, see the results, and compare with the first measurement. Is there an improvement from JMeter measurements? Write your conclusion in the README.md file.
 
