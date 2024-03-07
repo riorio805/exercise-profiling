@@ -18,6 +18,11 @@ Results of performance testing for endpoint **'/highest-gpa'** using command-lin
 Results of performance testing for endpoint **'/all-student-name'** using command-line
 
 ### optimizing /all-student
+![before-after-all-student.png](readme-images%2Fbefore-after-all-student.png)
+Comparison of before optimization and after optimization,
+which shows an ~81% reduction in CPU time (8.5s -> 1.6s).
+More tests shown below which verify the times.
+
 ![](readme-images/unoptimized-all-student.png)
 Sample of 4 tests before optimizing **'/all-student'** endpoint.<br>
 Average CPU time for the method is ~8 seconds
