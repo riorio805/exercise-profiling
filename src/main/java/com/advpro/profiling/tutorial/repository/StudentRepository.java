@@ -13,8 +13,8 @@ import java.util.List;
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
     @Query(
-            value = "SELECT * FROM students WHERE gpa = (SELECT MAX(gpa) from students)",
-            nativeQuery = true
+        value = "SELECT * FROM students WHERE gpa = (SELECT MAX(gpa) from students)",
+        nativeQuery = true
     )
     public List<Student> getStudentWithHighestGpa();
 }

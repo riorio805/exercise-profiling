@@ -48,6 +48,14 @@ Optimized by using a better query which automatically
 returns all students with the highest gpa.
 
 ### optimizing /all-student-name
+![speed-diff-all-student-names.png](readme-images%2Fspeed-diff-all-student-names.png)
+Sample comparison of before optimization and after optimization,
+which shows an **~78% reduction** in CPU time (784ms -> 169ms).
+Optimized by using StringBuilder instead of String, which
+is mutable so faster writes.
+
+### Conlusion
+i have no idea
 
 ## Reflection 1
 ans:
