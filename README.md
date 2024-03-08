@@ -18,18 +18,36 @@ Results of performance testing for endpoint **'/highest-gpa'** using command-lin
 Results of performance testing for endpoint **'/all-student-name'** using command-line
 
 ### optimizing /all-student
-![before-after-all-student.png](readme-images%2Fbefore-after-all-student.png)
-Comparison of before optimization and after optimization,
-which shows an ~81% reduction in CPU time (8.5s -> 1.6s).
-More tests shown below which verify the times.
+![unoptimized-all-student.png](readme-images%2Funoptimized-all-student.png)
+Tests performed before optimization.
+Average CPU time is ~8 seconds.
 
-![](readme-images/unoptimized-all-student.png)
-Sample of 4 tests before optimizing **'/all-student'** endpoint.<br>
-Average CPU time for the method is ~8 seconds
+![optimized-all-student.png](readme-images%2Foptimized-all-student.png)
+Tests performed after optimization.
+Average CPU time is ~1.6 seconds.
 
-![](readme-images/optimized-all-student.png)
-Sample of 4 tests after optimizing **'/all-student'** endpoint.<br>
-Average CPU time for the method is ~1.6 seconds, which is an ~80% reduction in CPU time
+![before-after-all-student.png](readme-images%2Fspeed-diff-all-student.png)
+Sample comparison of before optimization and after optimization,
+which shows an **~81% reduction** in CPU time (8.5s -> 1.6s).
+Optimized by querying the student_courses table directly (get all) 
+instead of finding by every student id.
+
+### optimizing /highest-gpa
+![unoptimized-highest-gpa.png](readme-images%2Funoptimized-highest-gpa.png)
+Tests performed before optimization.
+Average CPU time is ~170 milliseconds.
+
+![optimized-highest-gpa.png](readme-images%2Foptimized-highest-gpa.png)
+Tests performed before optimization.
+Average CPU time is ~48 milliseconds.
+
+![speed-diff-highest-gpa.png](readme-images%2Fspeed-diff-highest-gpa.png)
+Sample comparison of before optimization and after optimization,
+which shows an **~73% reduction** in CPU time (180ms -> 48ms).
+Optimized by using a better query which automatically
+returns all students with the highest gpa.
+
+### optimizing /all-student-name
 
 ## Reflection 1
 ans:
